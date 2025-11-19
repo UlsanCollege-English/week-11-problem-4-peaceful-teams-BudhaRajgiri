@@ -1,5 +1,9 @@
+from pathlib import Path
 import pytest
-from hw04.main import bipartition
+import sys
+import os
+sys.path.insert(0, str(Path(__file__).parent.parent))  
+from main import bipartition
 
 def is_valid_bipartition(graph, left, right):
     if left is None or right is None:
